@@ -1,0 +1,98 @@
+/* BACKGROUND COLOR */
+
+/* BG COLOR EXTRA */
+
+.bg-black {
+    background-color: #000000!important;
+}
+
+.bg-oxfordBlue{
+    background-color: #14213D!important;
+}
+
+.bg-orangeWeb{
+    background-color: #FCA311!important;
+}
+
+.bg-platinum{
+    background-color: #E5E5E5!important;
+}
+
+/* TEXT COLOR EXTRA */
+
+.text-black {
+    color: #000000!important;
+}
+
+.text-oxfordBlue{
+    color: #14213D!important;
+}
+
+.text-orangeWeb{
+    color: #FCA311!important;
+}
+
+.text-platinum{
+    color: #E5E5E5!important;
+}
+
+/* BTN COLOR EXTRA */
+
+.btn-black{
+    background-color: #000000;
+    color: white;
+
+    transition: 0.5s;
+}
+
+.btn-black:hover{
+    color: #E5E5E5!important;
+    border: 1px solid white!important;
+}
+
+
+
+.btn-white{
+    background-color: white;
+    color: #000000;
+    border: 1px solid #000000;
+
+    transition: 0.5s;
+}
+
+.btn-white:hover{
+    color: #E5E5E5!important;
+    border: 1px solid white!important;
+
+    background-color: #000000;
+}
+
+/* LINK COLOR EXTRA */
+
+
+.link-white{
+    color: white;
+
+    transition: 0.5s;
+}
+
+.link-white:hover{
+    color: #E5E5E5!important;
+}
+
+.link-black{
+    color: #000000;
+
+    transition: 0.5s;
+}
+
+.link-black:hover{
+    color: #E5E5E5!important;
+}
+
+/* BORDER COLOR EXTRA */
+
+.border-black{
+    border-color:  #000000!important;
+}
+
