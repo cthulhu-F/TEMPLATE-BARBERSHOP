@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <title>Home / BarberShop</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid">
+      <div class="container-md bg-white">
+
+        <nav class="navbar navbar-expand-lg pt-0 bg-white font-h1">
+          <div class="container-fluid">
+
+            <a class="navbar-brand text-dark bg-black p-1 pt-1 mt-0 rounded-0 rounded-circle rounded-top overflow-hidden"
+              href="#">
+              <img src="asset/marca/logo.jpeg" alt="" width="70" height="70">
+            </a>
+
+            <button class="navbar-toggler border" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span> <i class="bi bi-list fs-1"></i> </span>
+            </button>
+
+            <div class="collapse navbar-collapse bg-white text-center" id="navbarSupportedContent">
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-1 mx-auto">
+                <li class="nav-item mx-1 my-1  my-xl-0">
+                  <a class="nav-link link-black border-0 border-dark border-bottom" aria-current="page"
+                    href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-1 my-1  my-xl-0">
+                  <a class="nav-link link-black" href="shop.html">Shop</a>
+                </li>
+                <li class="nav-item mx-1 my-1 my-xl-0">
+                  <button type="button" class="nav-link btn btn-black rounded" href="turn.html" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Reserva tu turno <i class="bi bi-scissors"></i></button>
+                </li>
+              </ul>
+
+            </div>
+
+            <form class="d-xl-flex d-block my-2">
+              <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-black" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn btn-black ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                    class="bi bi-cart"></i></button>
+              </div>
+            </form>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-gl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title fs-4" id="exampleModalLabel">Carrito <i
+                      class="bi bi-cart"></i></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col">
+                        <div class="table-responsive font-p">
+                          <table class="table table-hover">
+                            <thead class="font-h1">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">SubTotal</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody >
+                              <tr>
+                                <td>
+                                  <div class="d-flex" style="height: 50px;">
+                                    <img src="asset/product/img-product.jpg" class=" rounded" alt="">
+                                  </div>
+                                </td>
+                                <td class="pt-3">
+                                  <div class="fs-7"> Producto 1  </div>
+                                  <div class="text-muted fs-7"> x1 </div>
+                                </td>
+                                <td class="pt-3">$10.99</td>
+                                <td class="pt-3">$10.99</td>
+                                <td class="pt-3">
+                                  <button class="btn btn-danger p-1 fs-7"><i class="bi bi-trash"></i></button>
+                                </td>
+                              </tr>
+                            </tbody>
+                            <tfoot></tfoot>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="shoppingcart.html" class="btn btn-black">Completar compra</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+
+
+  <section class="container-fluid bg-light p-4 min-vh-100 font-p">
+    <article>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-gl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fs-3 font-h1" id="staticBackdropLabel"> Nuevo turno <i class="bi bi-scissors"></i>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row g-2">
+
+                <div class="col-12">
+                  <div class="border-0 border-bottom">
+                    <span class="fw-bold fs-5 font-h1">
+                      Datos de contacto
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="input-group mb-1">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                    <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                        class="bi bi-person"></i></span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="input-group mb-1">
+                    <input type="number" class="form-control" placeholder="Telefono" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                    <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                        class="bi bi-telephone"></i></span>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="input-group mb-1">
+                    <input type="email" class="form-control" placeholder="Correo" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                    <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                        class="bi bi-envelope"></i></span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="border-0 border-bottom">
+                    <span class="fw-bold fs-5 font-h1">
+                      Motivo de turno
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Seleccione un motivo...
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body p-1">
+                        <ul class="list-group">
+                          <li class="list-group-item border-0">
+                            <input class="form-check-input me-1" name="motivo" type="radio" value="" aria-label="...">
+                            Motivo 1
+                          </li>
+                          <li class="list-group-item border-0">
+                            <input class="form-check-input me-1" name="motivo" type="radio" value="" aria-label="...">
+                            Motivo 2
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="border-0 border-bottom">
+                    <span class="fw-bold fs-5 font-h1">
+                      Seleccione una fecha disponible
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="d-flex">
+                    <input class="form-control" type="date" name="trip-start" value="2021-12-06" min="2022-12-06"
+                      max="2022-12-31">
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="input-group">
+                    <select class="form-select border-0 border-start border-top border-bottom" id="inputGroupSelect02">
+                      <option selected>Horarios</option>
+                      <option value="1">00:00</option>
+                    </select>
+                    <label class="input-group-text bg-white border-0 border-end border-top border-bottom"
+                      for="inputGroupSelect02"><i class="bi bi-clock"></i></label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-black">Generar turno</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="container-md font-p bg-white rounded p-3">
+
+      <div class="row g-3">
+
+        <div class="col-12 mb-3">
+          <span class="fs-3 font-h1">Mi carrito</span>
+        </div>
+
+        <div class="col-12 col-xl-8">
+          <div class="row font-h1 fw-bold my-2 d-none d-xl-flex justify-content-left">
+            <div class="col-1"></div>
+            <div class="col-3">PRODUCTO</div>
+            <div class="col-3">CANTIDAD</div>
+            <div class="col-2">PRECIO</div>
+            <div class="col-2">SUBTOTAL</div>
+            <div class="col-1"></div>
+          </div>
+
+        <div class="row g-2 g-xl-3 my-1 py-2 border-0 border-bottom">
+              <div class="col-6 col-xl-1">
+                <div class="d-flex" style="height: 50px;">
+                  <img src="asset/product/img-product.jpg" class=" rounded" alt="">
+                </div>
+              </div>
+
+              <div class="col-6 col-xl-3">
+                <div class="d-block fs-7">
+                  Producto 1
+                </div>
+                <div class="d-block fs-7 text-muted">
+                  Descripcion afas safasfasfasfsaa as afsf  fasfasfasf
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-3">
+                        <div class="d-flex">
+                          <button class="btn btn-white border rounded-0 rounded-start fs-7 px-1 px-xl-3 fw-bold " style="z-index: 2;"><i class="bi bi-dash"></i></button>
+                        <input class="form-control border-0 border-top border-bottom rounded-0 bg-white text-center fs-7" placeholder="1" type="number" disabled>
+                        <button class="btn btn-white border rounded-0 rounded-end fs-7 px-1 px-xl-3 fw-bold" style="z-index: 2;"><i class="bi bi-plus"></i></button>
+                        </div>
+              </div>
+
+
+              <div class="col-6 col-xl-2"><span class="fs-7">$10.999999</span></div>
+              <div class="col-5 col-xl-2"><span class="fs-7 fw-bold">$10.999999</span></div>
+              <div class="col-1 col-xl-1 d-inline"><button class="btn btn-danger p-1 fs-7"><i class="bi bi-trash"></i></button></div>
+            </div>
+
+            <div class="row g-2 g-xl-3 my-1 py-2 border-0 border-bottom">
+              <div class="col-6 col-xl-1">
+                <div class="d-flex" style="height: 50px;">
+                  <img src="asset/product/img-product.jpg" class=" rounded" alt="">
+                </div>
+              </div>
+
+              <div class="col-6 col-xl-3">
+                <div class="d-block fs-7">
+                  Producto 1
+                </div>
+                <div class="d-block fs-7 text-muted">
+                  Descripcion
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-3">
+                        <div class="d-flex">
+                          <button class="btn btn-white border rounded-0 rounded-start fs-7 px-1 px-xl-3 fw-bold " style="z-index: 2;"><i class="bi bi-dash"></i></button>
+                        <input class="form-control border-0 border-top border-bottom rounded-0 bg-white text-center fs-7" placeholder="1" type="number" disabled>
+                        <button class="btn btn-white border rounded-0 rounded-end fs-7 px-1 px-xl-3 fw-bold" style="z-index: 2;"><i class="bi bi-plus"></i></button>
+                        </div>
+              </div>
+
+
+              <div class="col-6 col-xl-2"><span class="fs-7">$10.999999</span></div>
+              <div class="col-5 col-xl-2"><span class="fs-7 fw-bold">$10.999999</span></div>
+              <div class="col-1 col-xl-1 d-inline"><button class="btn btn-danger p-1 fs-7"><i class="bi bi-trash"></i></button></div>
+            </div>
+
+            <div class="row g-2 g-xl-3 my-1 py-2 border-0 border-bottom">
+              <div class="col-6 col-xl-1">
+                <div class="d-flex" style="height: 50px;">
+                  <img src="asset/product/img-product.jpg" class=" rounded" alt="">
+                </div>
+              </div>
+
+              <div class="col-6 col-xl-3">
+                <div class="d-block fs-7">
+                  Producto 1
+                </div>
+                <div class="d-block fs-7 text-muted">
+                  Descripcion
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-3">
+                        <div class="d-flex">
+                          <button class="btn btn-white border rounded-0 rounded-start fs-7 px-1 px-xl-3 fw-bold " style="z-index: 2;"><i class="bi bi-dash"></i></button>
+                        <input class="form-control border-0 border-top border-bottom rounded-0 bg-white text-center fs-7" placeholder="1" type="number" disabled>
+                        <button class="btn btn-white border rounded-0 rounded-end fs-7 px-1 px-xl-3 fw-bold" style="z-index: 2;"><i class="bi bi-plus"></i></button>
+                        </div>
+              </div>
+
+
+              <div class="col-6 col-xl-2"><span class="fs-7">$10.999999</span></div>
+              <div class="col-5 col-xl-2"><span class="fs-7 fw-bold">$10.999999</span></div>
+              <div class="col-1 col-xl-1 d-inline"><button class="btn btn-danger p-1 fs-7"><i class="bi bi-trash"></i></button></div>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-xl-4">
+          <div class="row g-4">
+            <div class="col-6 col-xl-4">
+              <div class="">TOTAL</div>
+            </div>
+            <div class="col-6 col-xl-8">
+              <div class="text-end"> $10.9999999</div>
+            </div>
+            <div class="col-6 col-xl-4">
+              <div class="fw-bold">SUBTOTAL</div>
+            </div>
+            <div class="col-6 col-xl-8">
+              <div class="text-end fw-bold"> $10.9999999</div>
+            </div>
+            <div class="col-12 col-xl-12">
+              <div class="text-center border-0 border-bottom font-h1 fs-5">Seleccionar metodo de pago</div>
+            </div>
+            <div>
+              <button class="w-100 btn btn-orangeWeb">  Finalizar compra </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </article>
+   
+  </section>
+
+  <footer class="text-center text-lg-start bg-dark text-muted font-h1">
+    <div class="container-md">
+
+      <section class="">
+        <div class="container">
+
+          <div class="row pt-0 ">
+
+            <div class="col-12 col-xl-3 d-flex justify-content-xl-start justify-content-center">
+              <a class="navbar-brand text-dark p-2 rounded-top rounded-circle overflow-hidden"
+                style="background-color: #000000!important;" href="#">
+                <img src="asset/marca/logo.jpeg" alt="" width="200" height="200">
+              </a>
+            </div>
+
+            <div class="col-12 col-xl-3 d-flex justify-content-center">
+              <ul class="list-group bg-dark p-1">
+                <li class="list-group-item border-0 bg-dark p-1"><a class="text-decoration-none link-white"
+                    href="">Informacion</a></li>
+                <li class="list-group-item border-0 bg-dark p-1"><a class="text-decoration-none link-white"
+                    href="">Quienes somos</a></li>
+                <li class="list-group-item border-0 bg-dark p-1"><a class="text-decoration-none link-white"
+                    href="">Terminos y condiciones</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-xl-3 d-flex justify-content-center">
+              <ul class="list-group bg-dark p-1">
+                <li class="list-group-item border-0 border-white border-bottom bg-dark p-1">
+                  <a class="text-decoration-none  link-white" href="">Home</a>
+                </li>
+
+                <li class="list-group-item border-0 border-white border-bottom bg-dark p-1">
+                  <a class="text-decoration-none link-white" href="">Shop</a>
+                </li>
+
+                <li class="list-group-item border-0 bg-dark p-1"><a class="text-decoration-none btn btn-dark m-0 fs-6"
+                    href="">Reserva tu turno <i class="bi bi-scissors"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-xl-3 d-flex justify-content-xl-center justify-content-center">
+              <ul class="list-group bg-dark p-1">
+
+                <li class="list-group-item  text-xl-start p-0 border-0 bg-dark py-1"><a
+                    class="text-decoration-none link-white" href=""><i class="bi bi-geo-alt"></i> Direccion</a></li>
+
+                <li class="list-group-item text-xl-start p-0 border-0 bg-dark py-1"><a
+                    class="text-decoration-none link-white" href=""><i class="bi bi-telephone"></i> Telefono</a></li>
+
+                <li class="list-group-item bg-dark text-xl-start p-0 border-0  py-1"><a
+                    class="text-decoration-none link-white" href=""><i class="bi bi-envelope"></i> Correo</a></li>
+
+                <li class="list-group-item bg-dark text-xl-start p-xl-0 border-0 pt-2">
+                  <a class="text-decoration-none btn p-xl-0 link-white" href="">
+                    <i class="bi bi-instagram"></i>
+                    Instagram
+                  </a>
+                </li>
+
+                <li class="list-group-item bg-dark text-xl-start p-xl-0 border-0 ">
+                  <a class="text-decoration-none btn p-xl-0  link-white" href="">
+                    <i class="bi bi-facebook"></i>
+                    Facebook
+                  </a>
+                </li>
+
+
+
+              </ul>
+            </div>
+
+            <div class="col-12">
+              <div class="text-center p-2 fs-8 text-title text-muted">
+                © 2021 Copyright:
+                <a class="text-decoration-none text-muted fw-bold" href="https://mdbootstrap.com/">Todos los derechos
+                  reservados</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

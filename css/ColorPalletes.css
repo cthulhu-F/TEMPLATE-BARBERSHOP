@@ -67,6 +67,19 @@
     background-color: #000000;
 }
 
+
+.btn-orangeWeb{
+    background-color:  #FCA311!important;
+    color: #000000;
+    border: 1px solid #E5E5E5!important;
+
+    transition: 0.5s;
+}
+
+.btn-orangeWeb:hover{
+    color: #E5E5E5!important;
+}
+
 /* LINK COLOR EXTRA */
 
 
