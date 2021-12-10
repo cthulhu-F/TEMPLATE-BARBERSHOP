@@ -32,10 +32,13 @@ body{
   font-size: 10px;
 }
 
-/* BTN CAROUSEL */
+/* ALIGN TEXT */
 
-.btn-carousel{
-  width: 2%;
+
+.aling-middle{
+  vertical-align: middle!important;
 }
+
+
 
 

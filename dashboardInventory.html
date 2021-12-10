@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Administracion / Tienda Online</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid bg-light min-vh-100">
+
+    <div class="row">
+      <div class="col-2 col-xl-2 bg-black min-vh-100 p-0 m-0 font-h1">
+
+        <div class="d-flex flex-column flex-shrink-0 py-2">
+          <a href="" class="d-flex justify-content-center text-decoration-none text-white fs-4 p-2 fw-bold">
+            <i class="bi bi-box  ms-1 mx-xl-2 me-xl-2"></i>
+            <div class="d-none d-xl-inline text-color-gradient">BACK OFFICE</div>
+          </a>
+        </div>
+
+        <ul class="nav nav-pills flex-column m-0 ps-1 ps-xl-0">
+
+          <li
+            class="nav-item rounded-pill rounded-end ms-0 ms-xl-3 p-0 pe-2 ps-3 p-xl-3 fs-5 navbar-link-primary my-1 my-xl-2 ">
+            <a href="dashboardSales.html" class="text-decoration-none text-white" aria-current="page">
+              <i class="bi bi-journal-arrow-up fs-4 mx-0 mx-xl-1"></i>
+              <span class="d-none d-xl-inline">Turnos</span>
+            </a>
+          </li>
+
+
+          <li
+            class="nav-item rounded-pill rounded-end ms-0 ms-xl-3 p-0 pe-2 ps-3 p-xl-3 fs-5 navbar-link-primary my-1 my-xl-2 ">
+            <a href="dashboardSales.html" class="text-decoration-none text-white" aria-current="page">
+              <i class="bi bi-journal-check fs-4 mx-0 mx-xl-1"></i>
+              <span class="d-none d-xl-inline">Orden de ventas</span>
+            </a>
+          </li>
+
+
+          <li
+            class="nav-item rounded-pill rounded-end ms-0 ms-xl-3 p-0 pe-2 ps-3 p-xl-3 fs-5 navbar-link-active-primary my-1 my-xl-2 ">
+            <a href="dashboardInventory.html" class="text-decoration-none text-white" aria-current="page">
+              <i class="bi bi-journals fs-4 mx-0 mx-xl-1"></i>
+              <span class="d-none d-xl-inline">Inventario</span>
+            </a>
+          </li>
+
+          <li
+            class="nav-item rounded-pill rounded-end ms-0 ms-xl-3 p-0 pe-2 ps-3 p-xl-3 fs-5 navbar-link-primary my-1 my-xl-2 ">
+            <a href="dashboardUsers.html" class="text-decoration-none text-white" aria-current="page">
+              <i class="bi bi-person-lines-fill fs-4 mx-0 mx-xl-1"></i>
+              <span class="d-none d-xl-inline">Usuarios</span>
+            </a>
+          </li>
+
+          <li
+            class="nav-item rounded-pill rounded-end ms-0 ms-xl-3 p-0 pe-2 ps-3 p-xl-3 fs-5 navbar-link-primary my-1 my-xl-2 ">
+            <a href="#" class="text-decoration-none text-white" aria-current="page">
+              <i class="bi bi-gear fs-4 mx-0 mx-xl-1"></i>
+              <span class="d-none d-xl-inline">Configuracion</span>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="col-10 col-xl-10 bg-light">
+
+        <div class="row px-3">
+          <div class="col-12 p-1">
+            <div class="row bg-dark shadow rounded p-0 mb-3">
+              <div class="col-12">
+                <div class="font-h1 fs-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row px-4 g-1">
+
+          <div class="col-12">
+            <div class="row p-2 mb-3">
+              <div class="col-12 p-0">
+                <div class="font-h1 fs-1 fw-bold">Inventario</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="row rounded p-2 mb-3">
+              <div class="col-12 col-xl-4 my-2 p-0">
+                <div class="d-flex">
+                  <input class="form-control p-2 me-2" type="search" placeholder="Busca tu producto"
+                    aria-label="Search">
+                  <button class="btn btn-black p-2" type="submit"><i class="bi bi-search"></i></button>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6"></div>
+              <div class="col-12 col-xl-2 my-2 p-0">
+                <div class="text-center d-xl-flex justify-content-end">
+                  <button class="btn btn-black w-100 p-2" data-bs-toggle="modal" data-bs-target="#modalAddProduct">
+                    Agregar producto
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="row  p-1 mb-3">
+              <div class="col-12 p-0">
+
+                <div class="table-responsive">
+                  <table class="table table-hover table-striped bg-white">
+                    <thead class="font-h1 aling-middle">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col"></th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody class="font-p aling-middle">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <div class="d-flex " style="height: 50px;">
+                            <img src="asset/product/img-product.jpg" class=" rounded" alt="">
+                          </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 150px;"> Producto </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 100px;"> 123456789 </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 300px;"> Descripcion del producto
+                            productoproductoproducto </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 100px;"> Peluqueria </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 100px;"> 500 </div>
+                        </td>
+                        <td>
+                          <div style="overflow-wrap: break-word; width: 100px;"> $10.99 </div>
+                        </td>
+                        <td>
+                          <div class="d-flex justify-content-center">
+                            <button class="btn btn-outline-success p-1 me-1" data-bs-toggle="modal"
+                              data-bs-target="#modalAddProduct"><i class="bi bi-pencil fs-7"></i></button>
+                            <button class="btn btn-outline-danger  p-1 me-1"><i class="bi bi-gear"></i></button>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="d-flex justify-content-center">
+                            <input class="form-check-input p-2 m-auto" type="checkbox" id="inlineCheckbox1" value="option1">
+                          </div>
+                        </td>
+                        <td>
+                          <div class="text-success fs-3 d-flex justify-content-center" title="ACTIVO">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="" colspan="11">
+                          <div class="d-flex justify-content-end">
+                            <nav aria-label="Page navigation example m-0">
+                              <ul class="pagination m-0">
+                                <li class="page-item">
+                                  <a class="page-link text-black" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                                <li class="page-item"><a class="page-link text-black" href="#">1</a></li>
+                                <li class="page-item">
+                                  <a class="page-link text-black" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+                          </div>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="row p-2 mb-3">
+              <div class="col-12">
+                <div class="font-h1 fw-bold fs-1">Categoria</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="row mb-3">
+              <div class="col-12 col-xl-8  pe-xl-3 p-0 mb-3">
+                <div class="h-100 p-xl-2 px-3">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped bg-white aling-middle">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col"></th>
+                          <th scope="col"></th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>
+                            <div style="overflow-wrap: break-word; width: 150px;"> Categoria </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <button class="btn btn-outline-success p-1 me-1" data-bs-toggle="modal"
+                                data-bs-target="#modalAddProduct"><i class="bi bi-pencil fs-7"></i></button>
+                              <button class="btn btn-outline-danger  p-1 me-1"><i class="bi bi-gear"></i></button>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <input class="form-check-input p-2 m-auto" type="checkbox" id="inlineCheckbox1" value="option1">
+                            </div>
+                          </td>
+                          <td>
+                            <div class="text-success fs-3 d-flex justify-content-center" title="ACTIVO">
+                              <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td class="" colspan="10">
+                            <div class="d-flex justify-content-end">
+                              <nav aria-label="Page navigation example m-0">
+                                <ul class="pagination m-0">
+                                  <li class="page-item">
+                                    <a class="page-link text-black" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link text-black" href="#">1</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link text-black" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav>
+                            </div>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-4 ps-3 mb-3">
+
+                <div class="row shadow-sm p-2">
+                  <div class="col-xl-12 mb-3">
+                    <span class="fw-bold fs-5 font-h1">Agregar nueva categoria</span>
+                  </div>
+
+                  <div class="col-xl-3 mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text bg-black text-white border border-black fs-9"
+                        id="basic-addon1">ID</span>
+                      <span class="input-group-text bg-black text-white border border-black fs-9"
+                        id="basic-addon1">1</span>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-9 mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control fs-8" placeholder="Nombre"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <span class="input-group-text fs-8 bg-black text-white border-black" id="basic-addon2"><i
+                          class="bi bi-grid"></i></span>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-12">
+                    <div class="row g-2">
+                      <div class="col-12">
+                        <button class="btn btn-orangeWeb w-100"> Agregar </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+
+  <div class="container-fluid">
+
+    <div class="modal fade" id="modalAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Agregar producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-2">
+
+              <div class="col-xl-12">
+                <div class="input-group">
+                  <span class="input-group-text bg-black text-white border border-black fs-9"
+                    id="basic-addon1">ID</span>
+                  <span class="input-group-text bg-black text-white border border-black fs-9" id="basic-addon1">1</span>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="input-group mb-1">
+                  <input type="text" class="form-control" placeholder="Nombre" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                      class="bi bi-person"></i></span>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="input-group mb-1">
+                  <input type="number" class="form-control" placeholder="Precio" aria-label="Precio"
+                    aria-describedby="basic-addon1">
+                  <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                      class="bi bi-currency-dollar"></i></span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="input-group mb-1">
+                  <input type="text" class="form-control" placeholder="SKU" aria-label="Sku"
+                    aria-describedby="basic-addon1">
+                  <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                      class="bi bi-upc"></i></span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="input-group mb-1">
+                  <select class="form-select" id="inputGroupSelect02">
+                    <option selected>Seleccione un categoria...</option>
+                    <option value="1">Categoria 1</option>
+                  </select>
+                  <label class="input-group-text bg-black text-white border border-black" for="inputGroupSelect02"><i
+                      class="bi bi-ui-checks-grid"></i></label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="input-group mb-1">
+                  <input type="number" class="form-control" placeholder="Stock" aria-label="stock"
+                    aria-describedby="basic-addon1">
+                  <span class="input-group-text bg-black text-white border border-black" id="basic-addon1"><i
+                      class="bi bi-box-seam"></i></span>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="d-flex">
+                  <img src="asset/product/img-product.jpg" class="w-100" alt="">
+                </div>
+                <div class="input-group mb-3">
+                  <input type="file" class="form-control" id="inputGroupFile02">
+                  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-orangeWeb">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <!--
+
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(window).on('load', function () {
+      var delayMs = 1500; // delay in milliseconds
+
+      setTimeout(function () {
+        $('#modalAddProduct').modal('show');
+      }, delayMs);
+    });
+  </script>
+  -->
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
